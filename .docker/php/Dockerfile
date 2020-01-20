@@ -13,5 +13,3 @@ ENV PHP_EXTENTIONS="pdo pdo_pgsql zip sodium"
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends ${PACKAGES}
 RUN docker-php-ext-install ${PHP_EXTENTIONS}
-
-RUN ["chmod", "-R", "777", "./storage"]
